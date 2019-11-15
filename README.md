@@ -28,4 +28,4 @@ Please remember your mnemonics and password, this is the only path for your wall
 
 ## How to use the extension with your web application
 The MAN Plus is a bridge that allows you to run Matrix dApps in your borowser without running a full Matrix node.
-Please see the [demo](https://github.com/AdamDavis007/manplus/blob/master/demo/package.json "demo").
+Please see the [demo](https://github.com/AdamDavis007/manplus/blob/master/demo/ "demo").
