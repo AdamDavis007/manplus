@@ -4,7 +4,7 @@
  `<script src="***/dqSeriesWallet.js.js"></script>` 
 
 # main function
- * walletInitFunc.walletPlugin(接口名，接口参数，成功回调，失败回调)
+ * walletInitFunc.walletPlugin(name，params，callbackSuccess，callbackFail)
  * walletInitFunc.walletPlugin(name,query,function(res){},function(err){})
  
 # error:
