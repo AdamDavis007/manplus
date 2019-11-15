@@ -1,4 +1,4 @@
-# chrome plugin
+# How to use MAN Plus in your program
 
 # Please use js
  `<script src="***/dqSeriesWallet.js.js"></script>` 
