@@ -1,0 +1,16 @@
+# IDE
+.vscode
+
+# dependencies
+node_modules
+.history
+
+# logs
+npm-debug.log
+yarn.lock
+
+# Backpack build
+build
+.idea
+.DS_Store
+.project

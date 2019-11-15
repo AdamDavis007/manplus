@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="dqSeriesWallet.js"></script>
+		<script type="text/javascript">
+			
+
+			window.onload = function(){
+				var btn = document.getElementById('btn'); 
+				var zhuanzhang = document.getElementById('zhuanzhang');
+				
+				btn.onclick = function(){
+					walletInitFunc.walletPlugin(
+				        "getAddressInfo",
+				        {},
+				        function(res) {
+				            console.log("getAddressInfo", res)
+				        },
+				        function(err) {
+				            console.error(err)
+				        }
+				   );
+				}
+				
+				
+				
+				zhuanzhang.onclick = function(){
+					var amount = document.getElementById('number').value;
+					amount = amount * 1000000000000000000;
+					var collectionAddress = document.getElementById('address').value;
+					var inputData = document.getElementById('inputData').value;
+					var gas = document.getElementById('gas').value;
+					// console.log(amount,collectionAddress,inputData,gas)
+					
+					walletInitFunc.walletPlugin(
+				        "walletPluginTransfer",
+				        {
+				          amount: amount, 
+				          collectionAddress: collectionAddress,
+						  inputData: inputData,
+						  gas: gas,
+				        },
+				        function(res) {
+				          console.log("walletPluginTransfer", res)
+				        },
+				        function(err) {
+				          console.error(err)
+				        }
+				    );
+				}
+				
+				
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="Get user information" />
+		<br />
+		<br />
+		<br />
+		<input type="number" name="number" id="number" value="" placeholder="Amount"/>
+		<input type="text" name="address" id="address" value="" placeholder="To Address"/>
+		<input type="text" name="inputData" id="inputData" value="" placeholder="inputData"/>
+		<input type="text" name="gas" id="gas" value="" placeholder="gas"/>
+		<input type="button" name="zhuanzhang" id="zhuanzhang" value="Transfer" />
+	</body>
+</html>
