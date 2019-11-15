@@ -1,13 +1,13 @@
 # How to use MAN Plus in your program
 
-# Please use js
+# Please add the below js to your web page
  `<script src="***/dqSeriesWallet.js.js"></script>` 
 
-# main function
+# Main function
  * walletInitFunc.walletPlugin(name，params，callbackSuccess，callbackFail)
  * walletInitFunc.walletPlugin(name,query,function(res){},function(err){})
  
-# error:
+# Error Message:
 * no plugin
 `errorMsg: {
 	message: "WalletPlugins is not defined",
